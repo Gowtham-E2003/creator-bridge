@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 
+ * In-app WebView (Instagram, TikTok) Performance & UX Enhancements
+ */
+:root {
+  color-scheme: dark;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-text-size-adjust: 100%;
+}
+
+html, body {
+  background-color: #09090b;
+  color: #f4f4f5;
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  overscroll-behavior-y: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Safe area support for iOS notches, dynamic islands & home bars */
+.safe-area-top {
+  padding-top: max(16px, env(safe-area-inset-top, 16px));
+}
+
+.safe-area-bottom {
+  padding-bottom: max(24px, env(safe-area-inset-bottom, 24px));
+}
+
+/* Shimmer gradient background utility */
+.shimmer-border {
+  background: linear-gradient(
+    90deg,
+    rgba(168, 85, 247, 0.4) 0%,
+    rgba(236, 72, 153, 0.7) 50%,
+    rgba(168, 85, 247, 0.4) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 4s linear infinite;
+}
+
+/* Hide scrollbars for native app-like feeling */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
